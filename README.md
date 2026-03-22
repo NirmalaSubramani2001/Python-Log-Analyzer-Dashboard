@@ -20,6 +20,7 @@ A web-based log analyzer built using Flask and Docker. This application allows u
 
 ## 📁 Project Structure
 
+
 log-analyzer-advanced/
 ├── app.py
 ├── Dockerfile
