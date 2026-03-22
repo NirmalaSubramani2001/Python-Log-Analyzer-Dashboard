@@ -18,8 +18,7 @@ A web-based log analyzer built using Flask and Docker. This application allows u
 
 ---
 
-## 📁 Project Structure
-
+### 📁 Project Structure
 
 log-analyzer-advanced/
 ├── app.py
@@ -28,9 +27,6 @@ log-analyzer-advanced/
 ├── templates/
 │ └── index.html
 └── logs/
-
-
---
 
 ## 🐳 Docker Setup
 
