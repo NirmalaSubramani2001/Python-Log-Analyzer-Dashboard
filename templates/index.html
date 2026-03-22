@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Log Analyzer</title>
+</head>
+<body>
+  <h1>📊 Log Analyzer Dashboard</h1>
+
+  <form method="POST" enctype="multipart/form-data">
+    <input type="file" name="logfile" required>
+    <button type="submit">Analyze</button>
+  </form>
+
+  {% if result %}
+    <h2>Results:</h2>
+    <ul>
+      <li>ERROR: {{ result.ERROR }}</li>
+      <li>WARNING: {{ result.WARNING }}</li>
+      <li>INFO: {{ result.INFO }}</li>
+    </ul>
+  {% endif %}
+</body>
+</html>
