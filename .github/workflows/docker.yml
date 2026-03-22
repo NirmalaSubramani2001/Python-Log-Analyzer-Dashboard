@@ -1,0 +1,22 @@
+name: Docker CIi
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Build Docker image
+      run: docker build -t log-analyzer .
+
+    - name: Run container test
+      run: docker run -d -p 5001:5000 log-analyzer
+
+    - name: Check container running
+      run: docker ps

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Log Analyzer</title>
+  <title>Log Analyzer Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <h1>📊 Log Analyzer Dashboard</h1>
@@ -18,6 +19,24 @@
       <li>WARNING: {{ result.WARNING }}</li>
       <li>INFO: {{ result.INFO }}</li>
     </ul>
+
+    <canvas id="chart" width="250" height="150"></canvas>
+
+    <script>
+      const data = {
+        labels: ["ERROR", "WARNING", "INFO"],
+        datasets: [{
+          label: "Log Count",
+          data: [{{ result.ERROR }}, {{ result.WARNING }}, {{ result.INFO }}],
+          backgroundColor: ["red", "orange", "green"]
+        }]
+      };
+
+      new Chart(document.getElementById("chart"), {
+        type: "bar",
+        data: data
+      });
+    </script>
   {% endif %}
 </body>
 </html>
