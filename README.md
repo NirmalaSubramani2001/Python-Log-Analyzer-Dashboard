@@ -39,7 +39,6 @@ docker build -t log-analyzer-advanced .
 
 docker run -p 5001:5000 -v $(pwd)/logs:/app/logs log-analyzer-advanced
 
-
 ---
 
 ## 🌐 Access Application
