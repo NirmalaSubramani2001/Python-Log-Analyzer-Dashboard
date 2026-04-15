@@ -43,6 +43,7 @@ docker run -p 5001:5000 -v $(pwd)/logs:/app/logs log-analyzer-advanced
 
 ## 🌐 Access Application
 http://localhost:5001
+https://python-log-analyzer-dashboard.onrender.com/
 
 ---
 
